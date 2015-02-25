@@ -1,0 +1,185 @@
+/*!
+ * Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved. * 
+ * The MIT License (MIT)
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+ *
+ * @author <ul><li>Farooq Sheikh (farooq.sheikh@aspose.com)</li>
+ */
+ 
+.slider-bar{
+            display:block; width:40px; background-color:blue; position:relative;
+        }
+
+        .slider, .slider-bar{
+            height:30px;
+        }
+        
+.aspose-logo {
+	background-image:url(../imgs/aspose-logo.png);
+	background-repeat:no-repeat;
+	background-position:10px 5px;
+	width: 250px;
+	padding: 30px;
+}
+body {
+	padding-top: 70px;
+	background-color: #f8f8f8;
+}
+.select-type {
+	display: block;
+	margin:0 5%;/*	width: 215px; */
+}
+.select {
+	background:none;
+	margin:5px 10px 5px;
+	height:50px;
+	width:50px;
+	text-align:center;
+	border-radius: 50px;
+	border: 1px dashed #ddd
+}
+.selected {
+	background:#5bc0de;
+	color:#fff;
+	margin:5px 10px 5px;
+	height:50px;
+	width:50px;
+	text-align:center;
+	border-radius: 50px;
+	border: 1px dashed #ddd;
+}
+.select:hover {
+	background:#5bc0de!important;
+}
+.select:hover span {
+	color:#fafafa!important
+}
+.qrcode-showcase .qrtypes button {
+	padding:0!important;
+	outline:0!important;
+	height:50px;
+	width:48px;
+	text-align:center;
+}
+.qrcode-showcase .qrtypes button span {
+	color:#333
+}
+.qrcode-showcase .qrtypes .selected button span {
+	color:#fff;
+	text-align:center
+}
+.qrcode-showcase .qrtypes button .glyphicon {
+	font-size:22px;
+}
+.datatype-text {
+	font-size:13px;
+	background:#286090;
+	border-radius:20px;
+	color:#FFF;
+	padding:5px 15px;
+	margin-top:5px
+}
+.navbar-inverse {
+	background-color: #212121;
+}
+.qrcode-showcase h3 {
+	border-bottom: 1px solid #EAEAEA;
+	padding-bottom: 10px;
+	margin-bottom:25px;
+}
+.tc {
+	text-align:center;
+}
+.w100 {
+	width:87%
+}
+.progress-selector {
+	position: absolute;
+	background: #5bc0de;
+	min-width: 25px;
+	min-height: 25px;
+	right: 21%;
+	border-radius: 100px;
+	z-index: 999;
+	border: 2px solid #FFF;
+	line-height: 0;
+	margin-top: -2px;
+	cursor:pointer;
+}
+.downloadbtn {
+	margin: 0 auto;
+	display: block;
+	clear: both;
+	width: 100%
+}
+.typeselection {
+	font-style:normal;
+}
+.gotop {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	height: 20px;
+	width: 20px;
+	top:inherit!important;
+	text-decoration:none!important;
+}
+.pd0 {
+	padding-left:0
+}
+.pd-lr0 {
+	padding-left:0;
+}
+.tl {
+	text-align:left;
+}
+a:focus {
+	outline:0;
+}
+.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th {
+	cursor:pointer;
+}
+.table-condensed>tbody>tr>td:hover {
+	background:#eaeaea;
+}
+.flnone {
+	float:none!important;
+}
+ @media (max-width:768px) {
+.select-type {
+width:auto;
+}
+.clearfix {
+display:none;
+}
+.contentbody .contentdata label {
+margin-top:20px
+}
+.contentbody .contentdata .btn-group {
+margin-top:20px
+}
+.preview-panel .form-group.input-group {
+width:100%;
+}
+.preview-panel .form-group.input-group .previewimage img {
+display: block;
+margin: 0 auto;
+width: auto;
+}
+.preview-panel .panel-body {
+text-align:center;
+}
+.downloadbtn {
+width:225px;
+}
+.share-panel .downloadbtn {
+width:230px;
+margin:15px auto;
+}
+.detail-text .col-lg-4 {
+margin-bottom:20px;
+}
+footer {
+margin-top:40px;
+}
+}

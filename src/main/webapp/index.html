@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<meta name="description" content="Aspose.BarCode is a Java barcode generator and barcode reader library. It supports 29+ Linear &amp; 2D barcode symbologies and allows exporting barcodes to JPG, GIF, PNG&amp; BMP image formats.">
+<link rel="icon" href="resources/imgs/favicon.ico">
+<link rel="author" href="https://plus.google.com/+FarooqSheikhPK/posts"/>
+<title>QR Code Generator by Aspose.BarCode for Java</title>
+
+<link href="resources/js/libs/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="resources/js/libs/bootstrap/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet" />
+<link href="resources/js/libs/bootstrap/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<link href="resources/css/docs.min.css" rel="stylesheet" />
+<link href="resources/css/apps.css" rel="stylesheet" />
+<script data-main="resources/js/app/main" src="resources/js/libs/require/2.1.15/require-min.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body role="document">
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand aspose-logo" href="http://aspose.com">&nbsp;</a> 
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden"> <a href="#page-top"></a> </li>
+        <li class="page-scroll"> <a href="http://www.aspose.com/total-component-suite.aspx">Aspose Components</a> </li>
+        <li class="page-scroll"> <a href="http://www.aspose.com/corporate/default.aspx">About Us</a> </li>
+        <li class="page-scroll"> <a href="http://www.aspose.com/corporate/contact/default.aspx">Contact</a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div class="container qrcode-showcase" role="main">
+  <div class="row QRCodeGenMain">
+    <div class="col-lg-12 tc">
+      <h1>QR Code Generator by Aspose.BarCode for Java<br>
+      </h1>
+      <p>A robust and reliable QR Code generation application written in Java using Aspose.BarCode for Java.
+        </p>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <!-- QR Code Types -->
+    <div class="col-lg-9">
+      <div class="panel panel-default qrtypes">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-qrcode"></span> <span style="vertical-align:top"><strong>TYPE</strong></span> <span class="pull-right">VCard</span> </div>
+        <div class="panel-body">
+          <div class="select-type">
+            <div class="type selected pull-left" data-type="url">
+              <a href="#/type/url" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="URL"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/text" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="Text"> <span class="glyphicon glyphicon-file" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/geo" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="Geo Location"> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/event" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="Event"> <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/vcard" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="VCard"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/call" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="Call"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/wifi" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="Wifi"> <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> </a>
+            </div>
+            <div class="type select pull-left" data-type="text">
+              <a href="#/type/sms" type="button" class="btn btn-link btn-lg" aria-label="Left Align" data-toggle="tooltip" data-placement="bottom" title="sms"> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default content-panel">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-pencil"></span> <span style="vertical-align:top"><strong>Content - <em class="typeselection">VCard</em></strong></span> <span class=" pull-right">Characters limit/info</span> </div>
+        <div class="panel-body contentbody">
+          <div class="contentdata">
+            <!--Data Content Section -->
+            <div class="datatype-url hide">
+              <form class="form-url">
+                <label>Website URL</label>
+                <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></span>
+                  <input type="text" class="form-control" placeholder="http://" aria-describedby="basic-addon1">
+                </div>
+              </form>
+            </div>
+            <div class="datatype-text hide">
+              <form class="form-text">
+                <textarea class="form-control" rows="3"></textarea>
+              </form>
+            </div>
+            <div class="datatype-geolocation hide">
+              <form class="form-location">
+                <label>Latitude</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="453,666">
+                  <span class="input-group-addon">
+                  <input type="radio" name="a">
+                  N </span> <span class="input-group-addon">
+                  <input type="radio" name="a">
+                  S </span> </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Longitude</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="789,666">
+                  <span class="input-group-addon">
+                  <input type="radio" name="b">
+                  W </span> <span class="input-group-addon">
+                  <input type="radio" name="b">
+                  E </span> </div>
+              </form>
+            </div>
+            <div class="datatype-event hide">
+              <form class="form-event">
+                <label>Event Description</label>
+                <textarea class="form-control" rows="5"></textarea>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>From</label>
+                  <div class="input-group" id="sandbox-container">
+                    <input type="text" class="form-control" placeholder="From" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>To</label>
+                  <div class="input-group"  id="sandbox-container">
+                    <input type="text" class="form-control" placeholder="To" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></span> </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+              </form>
+            </div>
+            <div class="datatype-vcard hide">
+              <form class="form-vcard">
+                <div class="col-lg-6 pd0">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Company Organization</label>
+                  <input type="text" class="form-control" placeholder="Company Organization" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Title </label>
+                  <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Email [personal]</label>
+                  <input type="text" class="form-control" placeholder="Email [personal]" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Email [business]</label>
+                  <input type="text" class="form-control" placeholder="Email [business]" aria-describedby="basic-addon1">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Phone [mobile]</label>
+                  <input type="text" class="form-control" placeholder="Phone [mobile]" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Phone [home]</label>
+                  <input type="text" class="form-control" placeholder="Phone [home]" aria-describedby="basic-addon1">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Street</label>
+                  <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>City</label>
+                  <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Country</label>
+                  <input type="text" class="form-control" placeholder="Country" aria-describedby="basic-addon1">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Website </label>
+                  <input type="text" class="form-control" placeholder="Website" aria-describedby="basic-addon1">
+                </div>
+              </form>
+            </div>
+            <div class="datatype-call hide">
+              <form class="form-call">
+                <div class="col-lg-6 pd0">
+                  <label>Country Code</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="+61" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>Area Code</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="011" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></span> </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Phone Number</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1">
+                  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span></span> </div>
+              </form>
+            </div>
+            <div class="datatype-wifi hide">
+              <form class="form-wifi">
+                <div class="col-lg-7 pd0">
+                  <label>SSID/Network Name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="SSID/Network Name" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon glyphicon-signal" aria-hidden="true"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>Password</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="SSID/Network Name" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon glyphicon-signal" aria-hidden="true"></span></span> </div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-4 pd0">
+                  <label>Encryption Type</label>
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-lg-12  tl" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> WPA <span class="caret"></span> </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">WPA</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">WEP</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Unencrypted</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>&nbsp;</label>
+                  <div class="input-group">
+                    <p>
+                      <input type="checkbox"  checked>
+                      Wifi connection is unencrypted</p>
+                  </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+              </form>
+            </div>
+            <div class="datatype-sms hide">
+              <form class="form-sms">
+                <div class="col-lg-6 pd0">
+                  <label>Country Code</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="+61" aria-describedby="basic-addon1">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>Area Code</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control err" placeholder="Xyz" aria-describedby="basic-addon1">
+                    <span class="input-group-addon err" id="basic-addon1"><span class="glyphicon glyphicon-remove " aria-hidden="true"></span></span> </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Phone Number</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1">
+                  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span></span> </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Text</label>
+                <div class="input-group">
+                  <textarea class="form-control" rows="5" cols="70" ></textarea>
+                </div>
+              </form>
+            </div>
+            <!--Data Content Section -->
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default setting-panel">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-cog"></span> <span style="vertical-align:top"><strong>Settings</strong></span> </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="form-group">
+              <div class="col-lg-4 pd-lr0">
+                <div class="form-group input-group">
+                  <input type="text" class="form-control bgblack" placeholder="#Foreground"  data-toggle="tooltip" data-placement="bottom" title="Foreground">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-tint"></i></button>
+                  </span> </div>
+              </div>
+              <div class="col-lg-4 pd-lr0">
+                <div class="form-group input-group">
+                  <input type="text" class="form-control" placeholder="#Background"  data-toggle="tooltip" data-placement="bottom" title="Background">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-tint"></i></button>
+                  </span> </div>
+              </div>
+              <div class="col-lg-4 pd-lr0">
+                <div class="form-group input-group">
+                  <input type="text" class="form-control" placeholder="1"  data-toggle="tooltip" data-placement="bottom" title="Border Size">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-unchecked"></i></button>
+                  </span> </div>
+              </div>
+              <div class="col-lg-12 pd-lr0">
+                <label>Size</label>
+                 <div class="progress slider imgSizeSlider">
+                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="700" style="width: 80%"> 
+                  <span class="imgSizeSliderCaption" >200x200px</span> 
+                  </div>
+                </div>
+                <div class="btn-group tc col-lg-12" role="group">
+                  <button type="submit" class="btn btn-primary flnone qr-code-form">Generate Preview</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 preview-panel">
+      <div class="panel panel-default">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-eye-open"></span> <span style="vertical-align:top"><strong>Preview</strong></span> </div>
+        <div class="panel-body">
+          <div class="form-group input-group">
+            <div class="previewimage"> <img id="qrcode-preview-image" src="resources/imgs/qr-aspose.png" width="100%"> </div>
+          </div>
+          <label> <span class="glyphicon glyphicon-download-alt"></span> Download As</label>
+          <div class="btn-group downloadbtn"> <a href="#"  class="btn btn-success">JPEG</a> <a href="#"  class="btn btn-success">PNG</a>  <a href="#" class="btn btn-success">GIF</a> <a href="#" class="btn btn-success">TIFF</a> <a href="#" class="btn btn-success pull-center">BMP</a> </div>
+        </div>
+      </div>
+      <div class="panel panel-default share-panel">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-share-alt"></span> <span style="vertical-align:top"><strong>Share</strong></span> </div>
+        <div class="panel-body">
+          <input type="text" class="form-control" placeholder="http://img-generated.com/qr-code.png">
+          <div class="clearfix">&nbsp;</div>
+          <div class="btn-group downloadbtn"> <a href="#" class="btn btn-primary btn-xs">Facebook</a> <a href="#" class="btn btn-info btn-xs">Twitter</a> <a href="#"  class="btn btn-danger btn-xs">Google+</a> <a href="#"  class="btn btn-primary btn-xs">LinkedIn</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="col-lg-12 detail-text">
+    <div class="col-lg-4 pull-left pd-lr0">
+      <h3 class="panel-title"><strong>At a Glance</strong></h3>
+      A robust and reliable QR Code generationtion, written in Java using Aspose.BarCode for Java, it allows developers to quickly and easily add QR Code generation and recognition functionality to their Java applications.</div>
+    <div class="col-lg-4 pull-left pd-lr0">
+      <h3 class="panel-title"><strong>Platform Independence</strong></h3>
+      Developers have full control over every aspect of the image including: background color, color, image quality, customer defined resolution and can be used on a variety of platforms.</div>
+    <div class="col-lg-4 pull-left pd-lr0">
+      <h3 class="panel-title"><strong>Supported File Formats</strong></h3>
+      It has the ability to export to multiple image formats including: JPEG, PNG, GIF, TIFF</div>
+  </div>
+  <a href="#top" class="gotop glyphicon glyphicon-chevron-up"  data-toggle="tooltip" data-placement="top" title="Top">&nbsp;</a> </div>
+<!-- /container -->
+<div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<footer class="footer navbar-bottom">
+  <div class="container">
+    <p class="text-muted tc">© Aspose 2002-2015. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+
+</html>

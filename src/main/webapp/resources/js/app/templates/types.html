@@ -1,0 +1,528 @@
+<div class="col-lg-12 tc">
+      <h1>QR Code Generator by Aspose.BarCode for Java<br>
+      </h1>
+      <p>A Robust and reliable QR Code generation application written in Java using Aspose.BarCode for Java.
+        </p>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <!-- QR Code Types -->
+    
+<div class="col-lg-9">
+      <div class="panel panel-default qrtypes">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-qrcode"></span> <span style="vertical-align:top"><strong>TYPE - </strong></span> 
+        <% if(data.page == 'text') { %>
+        	<span><strong>Text </strong></span>		
+		<% }; %>
+
+		<% if(data.page == 'url') { %>
+			<span><strong>URL </strong></span>
+		<% }; %>
+
+		<% if(data.page == 'geo') { %>
+			<span><strong>Geo Location </strong></span>
+		<% }; %>
+		
+		<% if(data.page == 'event') { %>
+			<span><strong>Event </strong></span>
+		<% }; %>
+		
+		<% if(data.page == 'vcard') { %>
+			<span><strong>VCard </strong></span>
+		<% }; %>
+
+		<% if(data.page == 'call') { %>
+			<span><strong>Call </strong></span>
+		<% }; %>
+
+		<% if(data.page == 'wifi') { %>
+			<span><strong>Wifi </strong></span>
+		<% }; %>
+		
+		<% if(data.page == 'encryption') { %>
+			<span><strong>Encrypted Text using password-based encryption (PBE)- PBEWITHMD5AND128BITAES-CBC-OPENSSL</strong></span>
+		<% }; %>
+		
+		<% if(data.page == 'sms') { %>
+			<span><strong>SMS </strong></span>
+		<% }; %>
+        
+        
+        </div>
+        <div class="panel-body">
+          <div class="select-type">
+            <div data-type="url" class="type-url select pull-left">
+              <a title="URL" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/url"><span aria-hidden="true" class="glyphicon glyphicon-link"></span> </a>
+            </div>
+            <div data-type="text" class="type-text select pull-left">
+              <a title="Text" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/text"> <span aria-hidden="true" class="glyphicon glyphicon-file"></span> </a>
+            </div>
+            <div data-type="text" class="type-geo select pull-left">
+              <a title="Geo Location" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/geo"> <span aria-hidden="true" class="glyphicon glyphicon-map-marker"></span> </a>
+            </div>
+            <div data-type="text" class="type-event select pull-left">
+              <a title="Event" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/event"> <span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> </a>
+            </div>
+            <div data-type="text" class="type-vcard select pull-left">
+              <a title="VCard" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/vcard"> <span aria-hidden="true" class="glyphicon glyphicon-user"></span> </a>
+            </div>
+            <div data-type="text" class="type-call select pull-left">
+              <a title="Call" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/call"> <span aria-hidden="true" class="glyphicon glyphicon-earphone"></span> </a>
+            </div>
+            <div data-type="text" class="type-wifi select pull-left">
+              <a title="Wifi" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/wifi"> <span aria-hidden="true" class="glyphicon glyphicon-signal"></span> </a>
+            </div>
+            <div data-type="text" class="type-sms select pull-left">
+              <a title="sms" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/sms"> <span aria-hidden="true" class="glyphicon glyphicon-comment"></span> </a>
+            </div>
+            
+            <div data-type="text" class="type-encryption  select pull-left">
+              <a title="Encrypted QR Code" data-placement="bottom" data-toggle="tooltip" aria-label="Left Align" class="btn btn-link btn-lg" type="button" href="#/type/encryption "> <span aria-hidden="true" class="glyphicon glyphicon-lock"></span> </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default content-panel">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-pencil"></span> <span style="vertical-align:top">
+        <strong>Content - 
+        
+        <% if(data.page == 'text') { %>
+        	<em class="typeselection">Text</em>		
+		<% }; %>
+
+		<% if(data.page == 'url') { %>
+			<em class="typeselection">URL</em>
+		<% }; %>
+
+		<% if(data.page == 'geo') { %>
+			<em class="typeselection">Geo Location</em>
+		<% }; %>
+		
+		<% if(data.page == 'event') { %>
+			<em class="typeselection">Event</em>
+		<% }; %>
+		
+		<% if(data.page == 'vcard') { %>
+			<em class="typeselection">VCard</em>
+		<% }; %>
+
+		<% if(data.page == 'call') { %>
+			<em class="typeselection">Call</em>
+		<% }; %>
+
+		<% if(data.page == 'wifi') { %>
+			<em class="typeselection">Wifi</em>
+		<% }; %>
+		
+		<% if(data.page == 'sms') { %>
+			<em class="typeselection">SMS</em>
+		<% }; %>
+        
+        <% if(data.page == 'encryption') { %>
+			<em class="typeselection">Encrypted Text</em>
+		<% }; %>
+		
+        </strong></span> 
+        
+        <!-- 
+         <% if(data.page == 'text') { %>
+        	<span class=" pull-right">Characters limit/info</span>	
+		<% }; %>
+
+		<% if(data.page == 'event') { %>
+				<span class=" pull-right">Characters limit/info</span>
+		<% }; %>
+				
+		<% if(data.page == 'sms') { %>
+			<span class=" pull-right">Characters limit/info</span>
+		<% }; %>
+         -->
+        
+         
+        </div>
+        
+        <div class="panel-body contentbody">
+          <div class="contentdata">
+            <!--Data Content Section -->
+            <div class="datatype-url hide">
+              <form class="form-url">
+                <label>Website URL</label>
+                <div class="input-group"> <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon-link"></span></span>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="http://" value="http://aspose.com" class="form-control input-url">
+                </div>
+              </form>
+            </div>
+            <div class="datatype-text hide">
+              <form class="form-text">
+                <textarea rows="3" class="form-control input-textarea" spellcheck="true">http://aspose.com</textarea>
+              <div class="afterthedeadline-button" style="display: none;">&nbsp;</div></form>
+            </div>
+            <div class="datatype-geo hide">
+              <form class="form-location">
+                <label>Latitude</label>
+                <div class="input-group">
+                  <input type="text" placeholder="33.813404" value="33.813404" class="form-control input-geo-ns">
+                  <span class="input-group-addon">
+                  <input type="radio" name="geo-ns-radio"  id="geo-ns-radio" value="N">
+                  N</span> 
+                  <span class="input-group-addon">
+                  <input id="geo-ns-radio" type="radio" name="geo-ns-radio" value="S" checked>
+                  S</span> </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Longitude</label>
+                <div class="input-group">
+                  <input type="text" placeholder="151.169875" value="151.169875" class="form-control input-geo-ew">
+                  <span class="input-group-addon">
+                  <input type="radio" id="geo-ew-radio"  name="geo-ew-radio" value="W">
+                  W </span> <span class="input-group-addon">
+                  <input type="radio" id="geo-ew-radio"  name="geo-ew-radio" value="E" checked>
+                  E </span> </div>
+              </form>
+            </div>
+            <div class="datatype-event hide">
+            
+              <form class="form-event">
+              	<input type="hidden" class="input-event-fromdate" name="input-event-fromdate" value="" />
+              	<input type="hidden" class="input-event-todate" name="input-event-todate" value="" />
+              	
+                <label>Event Description</label>
+                <textarea rows="5" class="form-control input-event-description" spellcheck="true"></textarea>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>From</label>
+                  <div class="input-group date datepickerEventFrom">
+                    <input type="text" class="form-control"></input>
+                     <span class="input-group-addon">
+				     <span class="glyphicon glyphicon-calendar"></span>
+				    </span>
+                    </div>
+                </div>
+        
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>To</label>
+                  <div class="input-group date datepickerEventTo">
+				    <input  class="form-control" type="text"></input>
+				    <span class="input-group-addon">
+				     <span class="glyphicon glyphicon-calendar"></span>
+				    </span>
+				  </div>
+				  
+                  
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0 pull-left">
+                <label>Time Zone</label>
+                <div class="input-group">
+                  <select class="form-control evenTimeZone" id="evenTimeZone">
+							    <option value="+720">GMT -12:00</option>
+								<option value="+660">GMT -11:00</option>
+								<option value="+600">GMT -10:00</option>
+								<option value="+540">GMT -09:00</option>
+								<option value="+480">GMT -08:00</option>
+								<option value="+420">GMT -07:00</option>
+								<option value="+360">GMT -06:00</option>
+								<option value="+300">GMT -05:00</option>
+								<option value="+240">GMT -04:00</option>
+								<option value="+180">GMT -03:00</option>
+								<option value="+120">GMT -02:00</option>
+								<option value="+60">GMT -01:00</option>
+								<option value="0">GMT</option>
+								<option value="-60">GMT +01:00</option>
+								<option value="-120">GMT +02:00</option>
+								<option value="-180">GMT +03:00</option>
+								<option value="-240">GMT +04:00</option>
+								<option value="-300" selected="selected">GMT +05:00</option>
+								<option value="-360">GMT +06:00</option>
+								<option value="-420">GMT +07:00</option>
+								<option value="-480">GMT +08:00</option>
+								<option value="-540">GMT +09:00</option>
+								<option value="-600">GMT +10:00</option>
+								<option value="-660">GMT +11:00</option>
+								<option value="-720">GMT +12:00</option>
+				</select> 
+                </div>
+                </div>
+                
+              <div class="afterthedeadline-button" style="display: none;">&nbsp;</div>
+              </form>
+            </div>
+            <div class="datatype-vcard hide">
+              <form class="form-vcard">
+                <div class="col-lg-6 pd0">
+                  <label>First Name</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="First Name" class="form-control input-vcard-firstname">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Last Name</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Last Name" class="form-control input-vcard-lastname">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Company Organization</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Company Organization" class="form-control input-vcard-organization">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Title </label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Title" class="form-control input-vcard-title">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Email [personal]</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Email [personal]" class="form-control input-vcard-email-personal">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Email [business]</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Email [business]" class="form-control input-vcard-email-business">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Phone [mobile]</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Phone [mobile]" class="form-control input-vcard-phone-mobile">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Phone [home]</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Phone [home]" class="form-control input-vcard-phone-home">
+                </div>                
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Street</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Street" class="form-control input-vcard-address-street">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>City</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="City" class="form-control input-vcard-address-city">
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Country</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Country" class="form-control input-vcard-address-country">
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>Postal/Zip Code</label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Postal/Zip Code" class="form-control input-vcard-address-postalcode">
+                </div>
+                  <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-6 pd0">
+                  <label>Website </label>
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Website" class="form-control input-vcard-url">
+                </div>
+              </form>
+            </div>
+            <div class="datatype-call hide">
+              <form class="form-call">
+                <div class="col-lg-6 pd0">
+                  <label>Country Code</label>
+                  <div class="input-group">
+                    <input type="text" aria-describedby="basic-addon1" placeholder="+44" class="form-control input-phone-countrycode">
+                    <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-earphone"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>Area Code</label>
+                  <div class="input-group">
+                    <input type="text" aria-describedby="basic-addon1" placeholder="141" class="form-control input-phone-areacode">
+                    <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon-earphone"></span></span> </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Phone Number</label>
+                <div class="input-group">
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Phone Number" class="form-control input-phone-phonenumber">
+                  <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-earphone"></span></span> </div>
+              </form>
+            </div>
+            <div class="datatype-wifi hide">
+              <form class="form-wifi">
+                <div class="col-lg-7 pd0">
+                  <label>SSID/Network Name</label>
+                  <div class="input-group">
+                    <input type="text" aria-describedby="basic-addon1" placeholder="SSID/Network Name" class="form-control input-wifi-ssid">
+                    <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-signal"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>Password</label>
+                  <div class="input-group">
+                    <input type="text" aria-describedby="basic-addon1" placeholder="SSID/Network Name" class="form-control input-wifi-pass">
+                    <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-signal"></span></span> </div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-4 pd0">
+                  <label>Encryption Type</label>
+                  <div class="input-group">
+                  	<select class="form-control input-wifi-encryption-type">
+							    <option value="WPA" selected="selected">WPA</option>
+								<option value="WEP">WEP</option>
+								<option value="nopass">Unencrypted</option>
+					</select> 
+                </div>
+                </div>
+                <div class="col-lg-6 pd0">
+                  <label>&nbsp;</label>
+                  <div class="input-group">
+                    <p>
+                      <input type="checkbox" class="input-wifi-hidden">
+                      Wifi connection is hidden</p>
+                  </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+              </form>
+            </div>
+            
+            <div class="datatype-encryption hide">
+            
+              <form class="form-encryption">
+			  
+              	<input type="hidden" class="input-event-fromdate" name="input-event-fromdate" value="" />
+              	<input type="hidden" class="input-event-todate" name="input-event-todate" value="" />
+              	
+              	<label>Password (Key)</label>
+                <div class="input-group">
+                  <input type="password" aria-describedby="basic-addon1" placeholder="Password Key" class="form-control input-encryption-password">
+                  <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-lock"></span></span> </div>
+              	
+              	<div class="clearfix">&nbsp;</div>
+              	
+                <label>Text</label>
+                <textarea rows="5" class="form-control input-encryption-message" spellcheck="true"></textarea>
+                
+                <div class="alert alert-info" role="alert">
+  					<strong>OpenSSL Compatibility: </strong><br> <strong>Decryption</strong><br>[user@aspose]$ echo encrypted_text | openssl enc -aes-128-cbc -a -d
+				</div>
+                
+                
+              </form>
+            </div>
+            
+            <div class="datatype-sms hide">
+              <form class="form-sms">
+                <div class="col-lg-6 pd0">
+                  <label>Country Code</label>
+                  <div class="input-group">
+                    <input type="text" aria-describedby="basic-addon1" placeholder="+44" class="form-control input-sms-countrycode">
+                    <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-earphone"></span></span> </div>
+                </div>
+                <div class="col-lg-5 pd0 pull-right">
+                  <label>Area Code</label>
+                  <div class="input-group">
+                    <input type="text" aria-describedby="basic-addon1" placeholder="141" class="form-control input-sms-areacode">
+                    <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-earphone"></span></span> 
+                    <!-- 
+                    <span id="basic-addon1" class="input-group-addon err"><span aria-hidden="true" class="glyphicon glyphicon-remove "></span></span>
+                     --> 
+                    </div>
+                  <div class="clearfix">&nbsp;</div>
+                </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Phone Number</label>
+                <div class="input-group">
+                  <input type="text" aria-describedby="basic-addon1" placeholder="Phone Number" class="form-control input-sms-phonenumber">
+                  <span id="basic-addon1" class="input-group-addon"><span aria-hidden="true" class="glyphicon glyphicon glyphicon-earphone"></span></span> </div>
+                <div class="clearfix">&nbsp;</div>
+                <label>Text</label>
+                <div class="input-group">
+                  <textarea cols="70" rows="5" class="form-control input-sms-content" spellcheck="true"></textarea>
+                <div class="afterthedeadline-button" style="display: none;">&nbsp;</div></div>
+              </form>
+            </div>
+            <!--Data Content Section -->
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default setting-panel">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-cog"></span> <span style="vertical-align:top"><strong>Settings</strong></span> </div>
+        <div class="panel-body">
+          <form role="form" class="qr-code-form" >
+          <input type="hidden" name="page" value="<%= data.page %>" />
+          <input type="hidden" class="input-fcolor" name="fcolor" value="#000000" />
+          <input type="hidden" class="input-bgcolor" name="bgcolor" value="#FFFFFF" />
+          <input type="hidden" class="input-size" name="imgsize" value="100x100" />
+            <div class="form-group">
+                          <div class="col-lg-4 pd-lr0">
+                        
+							 <label for="sel1">Error Correction Code:</label>
+							  <select class="form-control errorCorrectionCode" id="errorCorrectionCode">
+							    <option>L</option>
+							    <option>M</option>
+							    <option>Q</option>
+							    <option>H</option>
+							  </select>
+
+              </div>
+              <div class="col-lg-8 pd-lr0">
+                <label>Size</label>
+                <div class="progress slider imgSizeSlider">
+                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="700" style="width: 80%"> 
+                  <span class="imgSizeSliderCaption" >200x200px</span> 
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="col-lg-4 pd-lr0">
+                <div class="form-group input-group fcolorpicker">
+                  <input type="text" class="form-control fcolor" placeholder="#Foreground"  data-toggle="tooltip" data-placement="bottom" title="Foreground">                  
+                  <span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Foreground"><i></i></span>
+                  </div>
+              </div>
+              <div class="col-lg-4 pd-lr0">
+                <div class="form-group input-group bgcolorpicker">
+                  <input type="text" class="form-control bcolor" placeholder="#Background"  data-toggle="tooltip" data-placement="bottom" title="Background">
+                  <span class="input-group-addon" data-toggle="tooltip" data-placement="bottom" title="Background"><i></i></span>                  
+                 </div>
+              </div>
+              <!-- 
+              <div class="col-lg-4 pd-lr0">
+                <div class="form-group input-group">
+                  <input type="text" class="form-control" placeholder="1"  data-toggle="tooltip" data-placement="bottom" title="Border Size">                   		  
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-unchecked"></i></button>
+                  </span> </div>
+              </div>
+               -->
+              <div class="btn-group tc col-lg-12 pd-lr0 " role="group">
+                  <button type="submit" class="btn btn-primary flnone">Generate Preview</button>
+                </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+   <div class="col-lg-3 preview-panel">
+      <div class="panel panel-default">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-eye-open"></span> <span style="vertical-align:top"><strong>Preview</strong></span> </div>
+        <div class="panel-body">
+          <div class="form-group input-group">
+            <div class="previewimage"> 
+            <img class="qrcode-preview-image" id="qrcode-preview-image" src="resources/imgs/qr-aspose.png" width="100%">
+            <img class="qrcode-preview-processing hide" id="qrcode-preview-processing" src="resources/imgs/processing.gif" width="100%"> 
+            </div>
+          </div>
+          <div class="qr-code-download hide">
+	          <label> <span class="glyphicon glyphicon-download-alt"></span> Download As</label>
+	          <div class="btn-group downloadbtn"> 
+	          	<a href="#"  class="btn btn-success download-jpeg">JPEG</a> 
+	          	<a href="#"  class="btn btn-success download-png">PNG</a> 
+	          	<a href="#" class="btn btn-success download-gif">GIF</a> 
+	          	<a href="#" class="btn btn-success download-tiff">TIFF</a>
+	          <!--  
+	          <a href="#" class="btn btn-success pull-center">BMP</a>
+	           --> 
+	          </div>
+          </div>
+        </div>
+      </div>
+      <!--  
+      <div class="panel panel-default share-panel">
+        <div class="panel-heading"> <span class="glyphicon glyphicon-share-alt"></span> <span style="vertical-align:top"><strong>Share</strong></span> </div>
+        <div class="panel-body">
+          <input type="text" class="form-control" placeholder="http://img-generated.com/qr-code.png">
+          <div class="clearfix">&nbsp;</div>
+          <div class="btn-group downloadbtn"> <a href="#" class="btn btn-primary btn-xs">Facebook</a> <a href="#" class="btn btn-info btn-xs">Twitter</a> <a href="#"  class="btn btn-danger btn-xs">Google+</a> <a href="#"  class="btn btn-primary btn-xs">LinkedIn</a> </div>
+        </div>
+      </div>
+      -->
+    </div>
+    
+

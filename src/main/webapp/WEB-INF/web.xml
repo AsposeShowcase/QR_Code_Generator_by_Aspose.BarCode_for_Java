@@ -1,0 +1,91 @@
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ 
+    <display-name>QR Code Generator by Aspose.BarCode for Java</display-name>
+ 
+    <!-- Configure ContextLoaderListener to use AnnotationConfigWebApplicationContext
+       instead of the default XmlWebApplicationContext -->
+  <context-param>
+      <param-name>contextClass</param-name>
+      <param-value>
+          org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+      </param-value>
+  </context-param>
+    
+  <!-- Configuration locations must consist of one or more comma- or space-delimited
+       fully-qualified @Configuration classes. Fully-qualified packages may also be
+       specified for component-scanning -->
+  <context-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>com.aspose.showcase.qrcodegen.web.config.AppConfig</param-value>
+  </context-param>
+  
+  <!-- Bootstrap the root application context as usual using ContextLoaderListener -->
+  <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+     
+    <servlet>
+        <servlet-name>api-dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+                 	
+          <init-param>
+          <param-name>contextClass</param-name>
+          <param-value>
+              org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+          </param-value>
+      </init-param>
+      <!-- Again, config locations must consist of one or more comma- or space-delimited
+           and fully-qualified @Configuration classes -->
+      <init-param>
+          <param-name>contextConfigLocation</param-name>
+          <param-value>com.aspose.showcase.qrcodegen.web.config.WebAppConfig</param-value>
+      </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>api-dispatcher</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+     
+   
+    
+   <filter>  
+        <filter-name>encodingFilter</filter-name>  
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+        <init-param>  
+            <param-name>encoding</param-name>  
+            <param-value>UTF-8</param-value>  
+        </init-param>  
+        <init-param>  
+            <param-name>forceEncoding</param-name>  
+            <param-value>true</param-value>  
+        </init-param>  
+    </filter>  	
+    <filter-mapping>  
+        <filter-name>encodingFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping> 
+  
+    <filter>
+        <filter-name>ApiOriginFilter</filter-name>
+        <filter-class>com.aspose.showcase.qrcodegen.web.api.filter.ApiOriginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ApiOriginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <welcome-file-list>
+         <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+</web-app>
