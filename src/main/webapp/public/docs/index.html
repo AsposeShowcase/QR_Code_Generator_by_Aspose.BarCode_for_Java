@@ -25,7 +25,7 @@
   <script type="text/javascript">
     $(function () {
       window.swaggerUi = new SwaggerUi({
-      url: "http://localhost:7070/qrcodegen/api/api-docs",
+      url: "http://localhost:8080/qrcodegen/api/api-docs",
       dom_id: "swagger-ui-container",
       supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
       onComplete: function(swaggerApi, swaggerUi){
@@ -55,18 +55,10 @@
       log("key: " + key);
       if(key && key.trim() != "") {
         log("added key " + key);
-        window.authorizations.add("key", new ApiKeyAuthorization("banckle-client-api-key", key, "header"));
+        window.authorizations.add("key", new ApiKeyAuthorization("api-key", key, "header"));
       }
-    })
+    });
     
-    $('#input_tokenKey').change(function() {
-      var key = $('#input_tokenKey')[0].value;
-      log("key: " + key);
-      if(key && key.trim() != "") {
-        log("added key " + key);
-        window.authorizations.add("key2", new ApiKeyAuthorization("banckle-authorize-token", key, "header"));
-      }
-    })
     window.swaggerUi.load();
   });
   </script>

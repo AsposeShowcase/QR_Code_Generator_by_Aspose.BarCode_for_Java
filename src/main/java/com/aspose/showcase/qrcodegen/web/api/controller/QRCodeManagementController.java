@@ -13,10 +13,7 @@ import com.aspose.barcode.CodeLocation;
 import com.aspose.barcode.GraphicsUnit;
 import com.aspose.barcode.ImageFormat;
 import com.aspose.barcode.ImageQualityMode;
-import com.aspose.barcode.MarginsF;
 import com.aspose.barcode.QRErrorLevel;
-import com.aspose.barcode.Resolution;
-import com.aspose.barcode.ResolutionMode;
 import com.aspose.barcode.Symbology;
 import com.aspose.showcase.qrcodegen.web.api.dto.ImageFormatDTO;
 import com.aspose.showcase.qrcodegen.web.api.util.StringEncryptor;
@@ -31,21 +28,13 @@ import com.wordnik.swagger.annotations.ApiParam;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
-import java.awt.image.WritableRaster;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -57,8 +46,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -198,15 +185,9 @@ public class QRCodeManagementController extends BaseController{
 			baos.close();
 		}
 		
-		
-		
-		
-		
-		
 		long endTime = System.currentTimeMillis();
 		
-		System.out.println("builder.save took " + (endTime - startTime) + " milliseconds");
-	
+		logger.debug("builder.save took " + (endTime - startTime) + " milliseconds");
 		
 		if(download){
 			MediaType responseType = getMediaTypeFromGeneratedImageFormat(responseImageType);
@@ -298,8 +279,6 @@ public class QRCodeManagementController extends BaseController{
 
 	private MediaType getMediaTypeFromGeneratedImageFormat(ImageFormat responseImageType) {
 		
-		System.out.println();
-		
 		if(responseImageType == null)
 			return MediaType.IMAGE_PNG;
 		
@@ -340,12 +319,12 @@ public class QRCodeManagementController extends BaseController{
 		
 		if("Jpeg".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_JPEG);;
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_JPEG);
 			responseHeaders.setContentType(MediaType.IMAGE_JPEG);
 			
 		}else if("Png".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_PNG);;
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_PNG);
 			responseHeaders.setContentType(MediaType.IMAGE_PNG);
 			
 		}else if("Gif".equalsIgnoreCase(requestedFormat)){
@@ -365,7 +344,7 @@ public class QRCodeManagementController extends BaseController{
 			
 		}else{
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_PNG);;
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_PNG);
 			responseHeaders.setContentType(MediaType.IMAGE_PNG);
 		}
 		

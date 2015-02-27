@@ -12,6 +12,8 @@
 	<description>QR Code Generator by Aspose.BarCode for Java</description>
 	<properties>
 		<spring.framework.version>4.1.4.RELEASE</spring.framework.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<sonar.language>java</sonar.language>
 		<war.scope>compile</war.scope>
 		<tomcat.host>localhost</tomcat.host>
 		<tomcat.port>8080</tomcat.port>
@@ -259,6 +261,7 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
@@ -266,7 +269,7 @@
 				<configuration>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>7070</port>
+							<port>8080</port>
 						</connector>
 					</connectors>
 					<scanIntervalSeconds>10</scanIntervalSeconds>

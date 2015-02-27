@@ -9,6 +9,8 @@ package com.aspose.showcase.qrcodegen.web.config;
 
 import java.io.File;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +28,7 @@ import com.aspose.barcode.License;
 @Import(AppConfigProperties.class)
 public class AppConfig {
 	
+	private static final Log logger = LogFactory.getLog(AppConfig.class);
 	private @Value("${license.file}") String licenseFile;
 	 
 	 @Bean
@@ -39,8 +42,9 @@ public class AppConfig {
 			 	license.setLicense(alicenseFile);
 			 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
+			logger.debug(e.getMessage());
+			
 		}
          return new BarCodeBuilder();
      }
