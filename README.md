@@ -1,4 +1,4 @@
-# QR Code Generator by Aspose.BarCode for Java
+# QR Code Generator by Aspose.BarCode for Java v1.0
 ---
 QR Code Generator by Aspose.BarCode for Java is a web application to generate various types of QR Code using [Aspose.BarCode for Java].
 
@@ -54,8 +54,8 @@ Application also supports to directly embed generated QR Code in any website of 
 3.  Customize QR Code Settings
 4.  Generate/Preview QR Code
 5.  Copy QR Code Save URL
-6.  Change URL query string ‘download’ to false. 
-7.  That’s it.  URL is now ready to embed as an image. 
+6.  Change URL query string â€˜downloadâ€™ to false. 
+7.  Thatâ€™s it.  URL is now ready to embed as an image. 
 
 ```sh
 <img width="100%" src="http://localhost:8080/qrcodegen/api/qrcode/generate?data=http://aspose.com&ecc=L&foreColor=%23000000&bgColor=%23FFFFFF&download=false&format=png">
@@ -86,12 +86,10 @@ $ mvn jetty:run
 - Import [QR_Code_Generator_by_Aspose.BarCode_for_Java] as a Maven Project
 - Server to run, such as [Glassfish]/[Tomcat]
 
-*Note: Set the application context path to ‘qrcodegen’ (if required).*
+*Note: Set the application context path to â€˜qrcodegenâ€™ (if required).*
 
 #####Access the deployed application at: http://localhost:8080/qrcodegen/
-<br>
-#version
-1.0
+
 
 #Aspose License
 The project works without a license, with limitations. To remove limitations, you can acquire a free [temporary license] or [buy a full license].
