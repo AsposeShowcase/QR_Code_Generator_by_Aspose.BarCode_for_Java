@@ -120,8 +120,6 @@
 			<version>1.46</version>
 		</dependency>
 
-		<!-- provided dependencies -->
-
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
