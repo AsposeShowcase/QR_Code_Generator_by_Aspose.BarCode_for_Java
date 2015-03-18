@@ -75,22 +75,13 @@ public class QRCodeManagementController extends BaseController{
 	private BarCodeBuilder builder;
 	
     /**
-     * Provides login authentication token for the clients trying to login to
-     * the system.
-     *
-     * Users are expected to use PUT method to provide the user id and password.
-     *
-     * @param credentials   user security credentials.
-     * @param request       client's HTTP request.
+     * generateQRCode - Main API to generate QR Code 
      * 
-     * @return              A <code>Result</code> object containing the hashcode 
-     *                      if credentials have been authenticated.
-     * @throws Exception 
+     * 
      */    
     @RequestMapping(value = "generate", method = RequestMethod.GET, 
     		produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE, MediaType.IMAGE_GIF_VALUE, MediaType_IMAGE_TIFF_VALUE, MediaType_IMAGE_BMP_VALUE})
-    @ApiOperation(value = "Generate QR Code.")
-    //public @ResponseBody byte[] generateQRCode(
+    @ApiOperation(value = "Generate QR Code.")    
     public ResponseEntity<byte[]>  generateQRCode(
     		@ApiParam( value = "data", name="data" , required = true) 
     		@RequestParam("data") String data,
