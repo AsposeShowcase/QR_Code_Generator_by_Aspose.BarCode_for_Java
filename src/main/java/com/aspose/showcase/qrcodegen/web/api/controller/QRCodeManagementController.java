@@ -170,7 +170,7 @@ public class QRCodeManagementController extends BaseController{
 			builder.setxDimension(1.0f);
 			builder.setyDimension(1.0f);
 
-			builder.save(baos,com.aspose.barcode.BarCodeImageFormat.Jpeg);
+			builder.save(baos,responseImageTypeDto.getBarCodeImageFormat());
 			baos.flush();
 			imageInByte = baos.toByteArray();
 			baos.close();
@@ -291,12 +291,12 @@ public class QRCodeManagementController extends BaseController{
 	private ImageFormatDTO getRequestedImageFormat(BarCodeBuilder builder,
 			HttpHeaders responseHeaders, String acceptHeaderValue, String format) {
 
-		ImageFormatDTO generatedImageFormat = new ImageFormatDTO(ImageFormat.getPng(),MediaType.IMAGE_PNG);
+		ImageFormatDTO generatedImageFormat = new ImageFormatDTO(ImageFormat.getPng(),MediaType.IMAGE_PNG,com.aspose.barcode.BarCodeImageFormat.Png);
 		responseHeaders.setContentType(MediaType.IMAGE_PNG);
 		
 		if(StringUtils.isBlank(acceptHeaderValue) 
 				&& StringUtils.isBlank(format))
-			return new ImageFormatDTO(ImageFormat.getPng(),MediaType.IMAGE_PNG);
+			return new ImageFormatDTO(ImageFormat.getPng(),MediaType.IMAGE_PNG,com.aspose.barcode.BarCodeImageFormat.Png);
 		
 		String requestedFormat = "Png";
 		
@@ -310,32 +310,32 @@ public class QRCodeManagementController extends BaseController{
 		
 		if("Jpeg".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_JPEG);
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_JPEG,com.aspose.barcode.BarCodeImageFormat.Jpeg);
 			responseHeaders.setContentType(MediaType.IMAGE_JPEG);
 			
 		}else if("Png".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_PNG);
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getPng(),MediaType.IMAGE_PNG,com.aspose.barcode.BarCodeImageFormat.Png);
 			responseHeaders.setContentType(MediaType.IMAGE_PNG);
 			
 		}else if("Gif".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getGif(),MediaType.IMAGE_GIF);
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getGif(),MediaType.IMAGE_GIF,com.aspose.barcode.BarCodeImageFormat.Gif);
 			responseHeaders.setContentType(MediaType.IMAGE_GIF);
 			
 		}else if("Tiff".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getTiff(),new MediaType("image", MediaType_IMAGE_TIFF));
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getTiff(),new MediaType("image", MediaType_IMAGE_TIFF),com.aspose.barcode.BarCodeImageFormat.Tiff);
 			responseHeaders.setContentType(new MediaType("image", MediaType_IMAGE_TIFF));
 			
 		}else if("Bmp".equalsIgnoreCase(requestedFormat)){
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getBmp(),new MediaType("image", MediaType_IMAGE_BMP));
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getBmp(),new MediaType("image", MediaType_IMAGE_BMP),com.aspose.barcode.BarCodeImageFormat.Bmp);
 			responseHeaders.setContentType(new MediaType("image", MediaType_IMAGE_BMP));
 			
 		}else{
 			
-			generatedImageFormat = new ImageFormatDTO(ImageFormat.getJpeg(),MediaType.IMAGE_PNG);
+			generatedImageFormat = new ImageFormatDTO(ImageFormat.getPng(),MediaType.IMAGE_PNG,com.aspose.barcode.BarCodeImageFormat.Png);
 			responseHeaders.setContentType(MediaType.IMAGE_PNG);
 		}
 		

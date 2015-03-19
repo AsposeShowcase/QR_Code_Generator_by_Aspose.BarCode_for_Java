@@ -19,12 +19,14 @@ public class ImageFormatDTO {
 	
 	ImageFormat asposeImageFormat;
 	MediaType mediaType;
+	int barCodeImageFormat;
 	
 		
-	public ImageFormatDTO(ImageFormat asposeImageFormat, MediaType mediaType) {
+	public ImageFormatDTO(ImageFormat asposeImageFormat, MediaType mediaType, int barCodeImageFormat) {
 		super();
 		this.asposeImageFormat = asposeImageFormat;
 		this.mediaType = mediaType;
+		this.barCodeImageFormat = barCodeImageFormat;
 	}
 	
 	public ImageFormat getAsposeImageFormat() {
@@ -33,10 +35,9 @@ public class ImageFormatDTO {
 	public MediaType getMediaType() {
 		return mediaType;
 	}
-	
-	
-	
 
+	public int getBarCodeImageFormat() {
+		return barCodeImageFormat;
+	}
 	
-
 }
