@@ -181,7 +181,8 @@ public class QRCodeManagementController extends BaseController{
 		logger.debug("builder.save took " + (endTime - startTime) + " milliseconds");
 		
 		if(download){
-			MediaType responseType = getMediaTypeFromGeneratedImageFormat(responseImageType);
+			
+			MediaType responseType = responseImageTypeDto.getMediaType();
 	        responseHeaders.setContentType(responseType);
 	        responseHeaders.add("Content-Disposition", "attachment; filename="+"Aspose_BarCode_QRCodeGen." + responseType.getSubtype());
 		}
@@ -285,7 +286,7 @@ public class QRCodeManagementController extends BaseController{
 		else if("Bmp".equalsIgnoreCase(responseImageType.toString()))			
 			return new MediaType("image", MediaType_IMAGE_BMP);
 		else
-			return MediaType.IMAGE_JPEG;
+			return MediaType.IMAGE_PNG;
 	}
 
 	private ImageFormatDTO getRequestedImageFormat(BarCodeBuilder builder,
