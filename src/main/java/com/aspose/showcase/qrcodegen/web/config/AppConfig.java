@@ -1,10 +1,10 @@
 /*
-* Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
-* 
-* The MIT License (MIT)
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
-* 
-*/
+ * Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
+ *
+ * The MIT License (MIT)
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+ *
+ */
 package com.aspose.showcase.qrcodegen.web.config;
 
 import java.io.File;
@@ -27,26 +27,27 @@ import com.aspose.barcode.License;
 @Configuration
 @Import(AppConfigProperties.class)
 public class AppConfig {
-	
-	private static final Log logger = LogFactory.getLog(AppConfig.class);
-	private @Value("${license.file}") String licenseFile;
-	 
-	 @Bean
-     public BarCodeBuilder barCodeBuilder() {
-		 License license = new License();
-		 try {
-			 
-			 File alicenseFile = new File(licenseFile); 
-			 
-			 if(alicenseFile.exists())
-			 	license.setLicense(alicenseFile);
-			 
-		} catch (Exception e) {
-			
-			logger.debug(e.getMessage());
-			
-		}
-         return new BarCodeBuilder();
-     }
-	
+
+    private static final Log LOGGER = LogFactory.getLog(AppConfig.class);
+
+    @Value("${license.file}")
+    private String licenseFile;
+
+    @Bean
+    public BarCodeBuilder barCodeBuilder() {
+        License license = new License();
+        try {
+
+            File alicenseFile = new File(licenseFile); 
+
+            if(alicenseFile.exists()){
+                license.setLicense(alicenseFile);
+            }
+
+        } catch (Exception e) {
+            LOGGER.info(e);
+        }
+        return new BarCodeBuilder();
+    }
+
 }

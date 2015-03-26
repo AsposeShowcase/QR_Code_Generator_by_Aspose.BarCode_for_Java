@@ -1,10 +1,10 @@
 /*
-* Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
-* 
-* The MIT License (MIT)
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
-* 
-*/
+ * Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
+ * 
+ * The MIT License (MIT)
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+ * 
+ */
 package com.aspose.showcase.qrcodegen.web.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,38 +41,37 @@ import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 @EnableSwagger
 @ComponentScan("com.aspose.showcase.qrcodegen.web")
 public class WebAppConfig extends WebMvcConfigurerAdapter{
-	 
-	private SpringSwaggerConfig springSwaggerConfig;
 
-	 @Autowired
-	  public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {
-	      this.springSwaggerConfig = springSwaggerConfig;
-	   }
-	 
-	 private ApiInfo apiInfo() {
-	      ApiInfo apiInfo = new ApiInfo(
-	              "QR Code Generator by Aspose.BarCode for Java",
-	              "Aspose Showcase QR Code Generator Web Application using Aspose.BarCode for Java",
-	              "QR Code Generator by Aspose.BarCode for Java - terms of service",
-	              "farooq.sheikh@aspose.com",
-	              "The MIT License (MIT)",
-	              "http://opensource.org/licenses/MIT"
-	        );
-	      return apiInfo;
-	    }
+    private SpringSwaggerConfig springSwaggerConfig;
 
-	@Override
+    @Autowired
+    public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {
+        this.springSwaggerConfig = springSwaggerConfig;
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfo(
+                "QR Code Generator by Aspose.BarCode for Java",
+                "Aspose Showcase QR Code Generator Web Application using Aspose.BarCode for Java",
+                "QR Code Generator by Aspose.BarCode for Java - terms of service",
+                "farooq.sheikh@aspose.com",
+                "The MIT License (MIT)",
+                "http://opensource.org/licenses/MIT"
+                );
+    }
+
+    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
-	
-	  @Bean 
-	   public SwaggerSpringMvcPlugin customImplementation(){
-	      return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
-	            .apiInfo(apiInfo())
-	            .includePatterns(".*qrcode.*")
-	            .pathProvider(new ApiRelativeSwaggerPathProvider());
-	   }
+
+    @Bean 
+    public SwaggerSpringMvcPlugin customImplementation(){
+        return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
+        .apiInfo(apiInfo())
+        .includePatterns(".*qrcode.*")
+        .pathProvider(new ApiRelativeSwaggerPathProvider());
+    }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -81,24 +80,22 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         localeChangeInterceptor.setParamName("lang");
         registry.addInterceptor(localeChangeInterceptor);
     }
-    
 
- 
+
+
     private class ApiRelativeSwaggerPathProvider extends SwaggerPathProvider {
-    	
-		@Override
-		protected String applicationPath() {
-			// TODO Auto-generated method stub
-			   return "/";
-		}
 
-		@Override
-		protected String getDocumentationPath() {
-			// TODO Auto-generated method stub
-			return "/";
-		}
+        @Override
+        protected String applicationPath() {
+            return "/";
+        }
+
+        @Override
+        protected String getDocumentationPath() {
+            return "/";
+        }
     }
-    
+
 
     @Bean
     public LocaleResolver localeResolver() {
@@ -134,4 +131,4 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
 
 }
 
-	
+
