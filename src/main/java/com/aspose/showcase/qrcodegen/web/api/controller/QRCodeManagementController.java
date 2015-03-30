@@ -95,7 +95,7 @@ public class QRCodeManagementController extends BaseController {
             @ApiParam(value = "jpeg|tiff|gif|png|bmp - default=png", name = "format", required = false) @RequestParam(required = false, value = "format") String format,
             @ApiParam(value = "true|false default=false", name = "download", required = false) @RequestParam(required = false, value = "download") boolean download,
             @ApiIgnore @Value("#{request.getHeader('" + ACCEPT_HEADER + "')}") String acceptHeaderValue)
-                    throws Exception {
+            throws Exception {
 
         Assert.isTrue(StringUtils.isNotEmpty(data),
                 "Please provide valid data param.");
